@@ -1,0 +1,13 @@
+.div1, .div2 {
+    background-color: red;
+}
+.img {
+    width: 20px;
+    height: 20px;
+}
+.span1, .span2 {
+    background-color: aquamarine;
+}
+.span2 {
+    float: right;
+}

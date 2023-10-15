@@ -1,0 +1,55 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.texto {
+    padding: 20px;
+}
+
+.texto::first-line{
+    color: blue;
+}
+
+.texto::first-letter {
+    font-size: 50px;
+}
+/*los pseudoelementos que necesitan la etiqueta content no forman parte del DOM*/
+/*No funcionan con elementos inline*/
+/*Los pseudoelementos dependen de un elemento, generalmente de algo cirscunstancial en el mismo*/
+
+input::placeholder {
+    background-color: blue;
+    color: rgb(111, 77, 15);
+
+}
+
+form {
+    padding: 100px;
+    margin: 100px auto;
+    border-radius: 4px;
+    display: block;
+    background-color: red;
+    width: 50%;
+}
+
+input {
+    padding: 6px;
+    width: 100%;
+}
+
+p::selection {
+    color: whitesmoke;
+    background-color: black;
+}
+
+b::before {
+    content: "me suscribi ";
+    color: blue;
+}
+
+b::after {
+    content: " Otra cosa";
+    color: red;
+}

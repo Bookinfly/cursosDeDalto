@@ -1,0 +1,38 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+}
+
+.flex-container {
+    
+    display: flex; 
+    height: 100vh;
+    /*flex-wrap: wrap;al combinarlo con grow y un minimo de with, los elementos se dividen el ancho del documento, pero si uno no entra completo pasa abajo y tambien se divide el ancho abajo para que ocupen todo el contenedor horizontalmente*/
+}
+
+.flex-item {
+    background-color: darkblue;
+    color: #fff;
+    /*margin: 5px; dentro de un contenedor flex el margin se comporta extraño, si marcamos alguna dirección de margin como margin-left auto el elemento se ira todo lo posible en dirección contraria
+    en caso de tener 2 direcciones como button y top en auto se centra en ese eje*/
+    min-width: 160px;
+    height: 100px;
+    text-align: center;
+    width: 300px;/*trabajando en flex el width es flexible y puede achicarse con la ventana*/
+    /*flex: 1 0 350px;shorthand para flex-grow flex-shrink y flex-basis*/
+    }
+
+.orange {
+    background-color: orange;
+    flex-shrink: 2;/*el valor por defecto es 1, e indica cuanto seden de su tamaño, un mayor numero indica que van a ceder más cuando faLTE ESPACIO*/
+    /*flex-grow: 2; el numero es la cantidad de partes que se le asigna a cada item, items invividuales pueden tener mas o menos partes, incliso con porcentuales, esta propiedad divide el espacio sobrante en esa cantidad de partes entre los elementos segun su valor de grow y rellena el contenedor*/
+    order: 2; /*el valor mas alto va primero en el main-axis(al final) y se acomodan en orden por ese valor */
+}
+
+.green {
+    background-color: green;
+    order: 4;
+    /*flex-basis: 300px;(funciona como width dentro de flex, pero con mas relevancia)/*
+    flex-grow: 1;
+    /*align-self: flex-start; con esto alineamos un elemento de forma individual*/
+}

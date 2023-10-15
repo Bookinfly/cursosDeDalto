@@ -1,0 +1,54 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+}
+
+.container {
+  background: #86f;
+  padding: 70px 50px;
+  width: 850px;
+  height: 500px;
+  border: 30px solid black;
+
+
+  margin: 40px;
+  background-image: url(https://th.bing.com/th/id/R.9bb40b09920d214ec6396fc8d5580740?rik=1D5sjMFt7OmN9g&pid=ImgRaw&r=0);
+  background-size: cover;
+  background-clip: content-box;
+  /* background-repeat: no-repeat; */
+  /* background-size: 100% 360px; (primera propiedad el width y segunda el heigth) */
+  border: 30px solid black;
+  background-origin: border-box;
+  /* background-origin: ; crea a partir de  */
+  /* background-clip: ; corta a partid de */
+
+
+}
+
+.caja2 {
+  padding: 70px 50px;
+  width: 850px;
+  height: 500px;
+  margin: 40px;
+  background: #86f;
+  background-image: url(https://th.bing.com/th/id/R.9bb40b09920d214ec6396fc8d5580740?rik=1D5sjMFt7OmN9g&pid=ImgRaw&r=0);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 400px;
+  background-position: right bottom;
+  border: 10px solid black;
+
+}
+
+.caja3 {
+  padding: 30px;
+  background: black;
+  height: 200px;
+  margin: 40px 0;
+  background-image: url(https://th.bing.com/th/id/R.9bb40b09920d214ec6396fc8d5580740?rik=1D5sjMFt7OmN9g&pid=ImgRaw&r=0);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+

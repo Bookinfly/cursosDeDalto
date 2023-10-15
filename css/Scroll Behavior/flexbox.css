@@ -1,0 +1,27 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    scroll-behavior: smooth;
+    user-select: none;
+    /* no dejamos que el usuario seleccione */
+}
+
+.container {
+  padding: 20px;
+  background-color: #59f;
+  font-size: 20px;
+  letter-spacing: 10px;
+  /* letter-spacing: es para aumentar el espacio entre letras; */
+}
+
+#content {
+  background-color: aqua;
+
+}
+
+a {
+  background-color: red;
+  color: black;
+  border: solid 1px dashed;
+}
+

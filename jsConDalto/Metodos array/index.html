@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("<b> "+"Metodos Transformadores"+"<b><br>")
+        let nombres = ["pedro","maria","jorge"];
+        document.write(nombres + "<br>");
+        let resultado = nombres.pop(); //quita el de atras
+        let numeros = [1,2,3]
+        document.write(numeros + "<br>");
+        document.write(resultado + "<br>");
+        document.write(nombres + "<br>");
+        nombres.shift(); //quita el de adelante
+        document.write(nombres + "<br>");
+        let pushMetod = nombres.push("esteban","josefa"); //agrega al final elementos
+        document.write(nombres + "<br>");
+        document.write(pushMetod + "<br>");
+        nombres.reverse(); //invierte el array
+        document.write(nombres + "<br>");
+        let paAtras = numeros.reverse();
+        document.write(numeros + "<br>");
+        let amplificado = numeros.unshift(6,5,4); //agrega atrás
+        document.write(numeros + "<br>");
+        let bingo = [5,88,6,2,-9,33,91];
+        document.write(bingo + "<br>");
+        bingo.sort();//ordena de menor a mayor y por orden lexicografico
+        document.write(bingo + "<br>");
+        nombres.sort();
+        document.write(nombres + "<br>");
+        bingo.splice(2,4,"34,25"); //elimina desde la posición "x" hasta la "y", si se usan "" y se agrega algo dentro, agrega elementos donde quito los otros
+        document.write(bingo + "<br>");
+        nombres.splice(1/*el primer num indica la posición desde la cuan inician los nuevos elementos*/,0/*con 0 indicamos que no se eliminan elementos*/,"pedro","pablo","vilma","bety" /*luego agregamos los elementos*/)
+        document.write(nombres + "<br>");
+        document.write("<b> "+"Metodos Accesores"+"<b><br>");
+            // en lugar de modificar, crea un nuevo array
+        let linea = bingo.join(" / "); //transforma en string y permite modificar la separacion por comas
+        document.write(linea + "<br>");
+        let bolilla = bingo.slice(0,2); //crea un array con el contenido del otro array en medio de las posiciones pasadas por parametro
+        document.write(bolilla + "<br>");
+        let tipo = nombres.includes("pedro");//valida si esta ese elemento
+        document.write(tipo + "<br>");
+        let donde = nombres.indexOf("sonico");//valida si esta ese elemento y devuelve la posicion o -1 si no esta
+        document.write(donde + "<br>");
+        let donde2 = nombres.indexOf("pablo");//valida si esta ese elemento y devuelve la posicion o -1 si no esta
+        document.write(donde2 + "<br>");
+        document.write("<b> "+"Metodos de Repetición"+"<b><br>");
+        nombres.forEach(sujeto => document.write(sujeto + "<br>"));//recibe una función como parametro, para ejecutarla una vez por cada elemento y la variable que recibe va a representar al elemento del array de esa iteración
+        let filtrado = nombres.filter(sujeto => sujeto.length > 5);//igual a forEach pero solo guarda en el nuevo array los que cumplan con una condición
+        document.write(filtrado + "<br>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

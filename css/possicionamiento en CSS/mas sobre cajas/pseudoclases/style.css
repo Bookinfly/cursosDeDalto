@@ -1,0 +1,53 @@
+* {
+    font-size: 20px;
+    color: green;
+}
+
+.caja1 {
+    background-color: gray;
+    display: block;
+    border: 2px;
+}
+
+.caja1:hover {
+    background-color: wheat;
+}
+
+a:link {
+    color: red;
+}
+
+.box {
+background-color: rebeccapurple; 
+    width: 10em;
+    height: 10em;
+}
+
+.box2 {
+    background-color: rebeccapurple; 
+        width: 10em;
+        height: 10em;
+    }
+
+.box:active {
+    background-color: black;
+    width: 20em;
+    height: 20em;
+    border: 2px red;
+    border-radius: 4px;
+    transition: 2s;
+
+}
+
+.box2:focus {
+    background-color: black;
+    width: 20em;
+    height: 20em;
+    border: 2px red;
+    border-radius: 4px;
+    transition: 2s;
+}
+
+p:lang(es) {
+    background-color: blue;
+}

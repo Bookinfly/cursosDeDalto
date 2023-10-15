@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: brown; border: 2px solid black;">Objeto Math Metodos</h1>
+    <script>
+        let numerin = Math.sqrt(25);//calcula raíz cuadrada
+        document.write(numerin + " <br>");
+        numerin = Math.cbrt(9);//calcula raíz cubica
+        document.write(numerin);
+        let bigNum = Math.max(22,2,23,52,5,78,);//num mas alto
+        document.write("<br>"+bigNum);
+        bigNum = Math.min(7, 77, 17 , 4);//num mas chico
+        document.write("<br>"+bigNum);
+        let sorteo = Math.random()*100;// crea numero aleatorio entre o y 1.
+        sorteo = sorteo.toString();
+        num = sorteo[0] + sorteo[1];
+        if (sorteo[1] == ".") {//sacamos los puntos
+            num = sorteo[0];
+        }
+        document.write("<br>" + num);
+        sorteo = Math.round(sorteo)
+        document.write("<br>" + sorteo);
+        let numnum = Math.random()*99;
+        numnum = Math.floor(numnum + 1);//quita decimales
+        document.write("<br>" + numnum);
+        numerin = Math.random()*100;//redondea
+        numerin = numerin.round;
+        document.write("<br>" + numnum +" round");
+        let numerado = Math.fround(3.43434534534499898899842); //redondea a solo 15 decimales
+        document.write(numerado);
+        let numerando = Math.trunc(8.1256);//elimina decimales
+        document.write("num " + numerando)
+        let piCircle = Math.PI;
+        document.write("<br>" + piCircle);
+
+
+        
+    </script>
+</body>
+</html>

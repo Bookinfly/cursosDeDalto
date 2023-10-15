@@ -1,0 +1,37 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+}
+
+body {
+    background-color: radial-gradient(circle,#fff,#bbb);
+}
+
+.div-responsive {
+  background: #c88;
+}
+
+/*Mobile-first es la metodoligia que dice iniciar por diseºnar para celular, despues ir haciendo las modificaciones a tablet, escritorio y ultra-wide*/
+/*Desckop-firs es la forma vieja, al contrario que la anterior*/
+/*Content-first priorizan el contenido y se diseña primero el contenido clave y despues se adapta*/
+
+@media screen and (min-width: 400px) and (max-width: 650px){
+  
+  .div-responsive {
+     background: rgb(191, 15, 15);
+  }
+}
+
+@media screen and (min-width: 200px) and (max-width: 399px){
+  
+  .div-responsive {
+    background: rgb(53, 158, 196);
+  }
+}
+
+@media screen and (min-width: 651px) and (max-width: 850px){
+  
+.div-responsive {
+  background: rgb(165, 191, 15);
+}
+}

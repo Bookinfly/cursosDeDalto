@@ -1,0 +1,47 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+}
+
+.container {
+  background: #86f;
+  padding: 20px 5px;
+
+}
+
+.caja {
+  background-color: #025 ;
+  height: 80px;
+  width: 80px;
+  margin: 20px;
+  display: flex;
+  color: #fff;
+  transition: 1s;
+  transform: translate(5, 2) ;
+  
+
+}
+
+.caja:hover {
+  transform: scaleY(2) translate(500px, 80px) scalex(2) /*skew(30deg)*/;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+  /*en el hover los parametros se reinician, si hay un transfor anterior lo mejor es ponerlo nuevamente en el hover, si es que pretender iniciar desde un efecto*/
+}
+
+article:hover {
+  background-color: black;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  clip-path: polygon(38% 72%, 100% 1%, 38% 100%, 0% 50%);
+  transform: translate(300px, 200px);
+}
+
+/*tenemos mejores transformaciones en clip-path https://bennettfeely.com/clippy/*/
+
+b {
+  margin: auto;
+  transform: skew(-30deg);/*corrijo el texto para inutilizar la deformacion en el*/
+}
+

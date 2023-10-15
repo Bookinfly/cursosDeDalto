@@ -1,0 +1,47 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+}
+
+:root {
+  --color-rojo: red;
+  /* creando la variable en el root tiene un ambito global */
+}
+
+div {
+  padding: 30px;
+  height: 150px;
+  width: 150px;
+  margin: 30px;
+}
+
+.conteiner {
+  background: var(--color-rojo);
+  color: var(--color-dos);
+  /* esta variable pertenece a otro ambito local y no funciona */
+
+
+
+
+}
+
+.conteiner2 {
+  background: blue;
+  --color-rojo: darkred;
+  /* redefinimos de forma local la variable global */
+  border: 5px solid var(--color-rojo);
+
+
+}
+
+article {
+  --color-dos: #ae1797;
+  background-color: var(--color-rojo);
+  /* creo var en ambito local */
+  padding: 30px;
+  height: 150px;
+  width: 150px;
+  margin: 30px;
+  color: var(--color-dos);
+}
+
