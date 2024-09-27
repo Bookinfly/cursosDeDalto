@@ -1,0 +1,23 @@
+* {
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.caja {
+    margin: 20px;
+    width: 300px;
+    height: 400px;
+
+}
+
+.caja img {
+    height: 100%;
+    width: 100%;
+    border: 2px solid red;
+    object-position: bottom;
+    object-fit: scale-down; /*la propiedad scale-down, para que llene el lado mas pequeño, sin deformarla y dejando ver el fondo de la caja donde sobre*/
+   /* object-fit: none; la propiedad none deja al objeto en su proporcion original, pero solo podemos ver lo que mida el contenedor, si es muy grande vamos a ver una pequeña parte*/
+   /* object-fit: cover; con el valor cover se recorta para entrar en el contenedor sin deformarse*/
+   /* object-fit: contain; /*En Objet-fit content hace que el contenido se adapte para entrar en el centro del contenedor sin desformarse*/
+}

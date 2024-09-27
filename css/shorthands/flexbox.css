@@ -1,0 +1,38 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+}
+
+body {
+    background-color: radial-gradient(circle,#fff,#bbb);
+}
+
+.grid-container {
+  background-color: #444;
+  display: grid;
+  grid-template-rows:
+  [f-line]
+   150px
+   [s-line]
+   150px
+   [t-line]
+   150px;
+  grid-template-columns:
+   150px
+   [linea-izquierda]
+   150px
+   150px;
+   [fin-del-main]
+  border: solid 8px #002;
+}
+
+.grid-item{
+  border: 1px solid #000;
+  background-color: #bbb;
+}
+
+.grid-item:first-child {
+  background-color: #700;
+  grid-row: f-line / t-line;
+  grid-column: linea-izquierda / fin-del-main;
+}

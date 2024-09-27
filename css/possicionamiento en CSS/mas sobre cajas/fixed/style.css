@@ -1,0 +1,50 @@
+* {
+    font-family: 'Karla', sans-serif;
+    font-weight: 100;
+    font-size: 40px;
+}
+
+p {
+    color: white;
+}
+
+div {
+    position: fixed;
+    margin: auto;
+    margin-top: 50px;
+    width: 250px;
+    height: 250px;
+    border: 4px red solid;
+    background-color: gray;
+    overflow: hidden;
+    /*overflow: scroll;/*se usa para manipular el contenido, usando scroll o auto oculta el contenido que ecxede el tamaño de la pagina*/
+}
+
+img {
+    position: relative;
+    width: 100%;
+    top: 160px;
+    left: 140px;
+    outline: 2px solid blue;
+    transition: all 2s;
+}
+
+/*img:hover {
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    outline: 2px solid blue;
+}*/
+
+div:hover > img {
+    width: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    outline: 2px solid blue;
+}
+
+body {
+    background-color: black;
+}

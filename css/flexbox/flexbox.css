@@ -1,0 +1,50 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+}
+
+.flex-container {
+    
+    display: flex; /*un elemento display flex actua como uno en bloque, pero el contenido por dentro actua de forma distinta*/
+    /*row el valor por defecto los flex-item se acomodan de izquierda a derecha uno al lado del otro, sin importar el tamaño de su contenido flex logra mantener la altura pareja, dividiendo el espacio entre los flex item*/
+    /* flex-direction: column-reverse; con esta propiedad es igual a colum, pero va de abajo hacia arriba*/
+    /*flex-wrap: nowrap; es el valor por defecto*/
+    /* flex-direction: column; cambia de correr en eje x a eje Y*/
+    /*flex-direction: row-reverse; con esta propiedad, en lugar de ir de izquierda a derecha, va de derecha a izquierda*/
+    flex-wrap: /*wrap; esto evita que las cajas se deformen, en lugar de eso se pasan a la fila de abajo cuando la ventana se vuelve más angosta*/
+    /*justify-content: center; /*el contenido se acomoda en el centro del ancho del documento*/
+    /*justify-content: space-around; /*pone la mayor distancia posible entre los objetos dentro del contenedor*/ 
+    justify-content: space-between; /*similar a margin auto*/
+    justify-content: space-evenly; /*a diferencia de between, las distancias son exactamente iguales, incluso de las cajas que dan a los bordes*/
+    height: 100vh;
+    /*align-items: stretch;propiedad por defecto, los elementos ocupan el alto completo del contenedor*/
+    /*align-items: center; centra el contenido verticalmente*/
+    /*align-items: flex-end; alinea al final del flexbox todo el contenido*/
+    /*align-items: flex-start; similar a strech, pero los elementos que no tienen tamaño ocupan solo el espacio del contenido*/
+    flex-wrap: wrap-reverse;/* es igual a wrap pero las cajas que no entran enteras van a la fila de arriba*/
+    /*flex-flow: colum wrap; es igual a flex wrap + flex direction*/
+    /*cuando hay varias lineas y usamos alingn-items las lineas siguientes se aliean al centro, para evitarlo usar align-conten*/
+    /* align-content: flex-start; la diferencia es que la opción anterior ajusta las sucesivas lineas al centro del contenedor espaciandolas a lo alto cuanto sea posible, y de esta forma, pasan alineadas justo debajo de la linea anterior*/
+    align-items: baseline; /*con baseline combinado con wrap-reverse logramos que se alinen abajo los elementos y al achicarce la ventana, suban al centro del contenedor */
+}
+
+.flex-item {
+    background-color: darkblue;
+    color: #fff;
+    margin: 5px;
+    min-width: 120px;
+    height: 80px;
+    /*width: 120px; si no le ponemos contenido, ní width, la caja en flex no se ve*/
+    
+    text-align: center;
+
+    /*si les doy un width 100% cada elemento llena el ancho del documento y el siguente pasa a la linea de abajo*/
+}
+
+.orange {
+    background-color: orange;
+}
+
+.green {
+    background-color: green;
+}

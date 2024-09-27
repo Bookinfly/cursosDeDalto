@@ -1,0 +1,75 @@
+* {
+    font-family: Arial, Helvetica, sans-serif
+    font-weight: 100;
+    font-size: 20px;
+}
+
+
+.cont {
+    margin: auto;
+    margin-top: 50px;
+    border: 4px solid red;
+    background: gray;
+    width: 50%;
+    padding: 20px;
+}
+
+
+.cont img {
+    float: left;
+    width: 300px;
+    margin-right: 20px;
+}
+/* Float se usaba mucho en HTML pero ya esta fuera de uso, este es uno de los ultimos usos que conserva
+para que esto sea posible es importante que la imagen en el contenedor este antes que el texto, y el mismo
+ no tenga un contenedor de parrafo.
+ 
+ dato curioso, la fuente que estaba usando me genero problemas, al cambiarla se soluciono
+ 
+ La propiedad CSS float ubica un elemento al lado izquierdo o derecho de su contenedor, permitiendo a los elementos de texto y en línea aparecer a su costado. El elemento es removido del normal flujo de la página, aunque aún sigue siendo parte del flujo (a diferencia del posicionamiento absoluto)
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.contenedor div{
+    float: right;
+}
+
+.primario {
+    background-color: red;
+    width: 70%;
+}
+
+.secundario {
+    background-color: yellow;
+    width: 30%;
+}enedor div{
+    float: right;
+}
+
+.primario {
+    background-color: red;
+    width: 70%;
+}
+
+.secundario {
+    background-color: yellow;
+    width: 30%;
+}*/
+
+
