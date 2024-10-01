@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Evento</title>
+</head>
+<body>
+    <button class="button">Haceme Click</button>
+    <img src="image.png" alt="">
+    <script>
+        const button = document.querySelector(".button");
+        // button.addEventListener("click", ()=>{
+        //     console.log(this)
+        // }) //solo nos muestra window porque this apunta window
+        button.addEventListener("click", (event)=>{//necesitamos meter un parametro /(e, evt, event) el parametro guarda el evento
+            console.log(this.event);//ahora this.event si nos va a señalar al evento
+        })
+        button.addEventListener("click", (event)=>{
+            console.log(event.target);//esto nos muestra el objeto que recibio el evento
+        })
+    </script>
+</body>
+</html>
