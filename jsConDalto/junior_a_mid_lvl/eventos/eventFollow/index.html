@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Follow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+    <img src="image.png" alt="">
+    <h1>Flujo de eventos</h1>
+    <p>Haz click sobre contenedores y botones</p>
+    <div class="rojo">
+        <div class="contenedor">
+            <button class="button">Click</button>
+        </div>
+    </div>
+    <pre>
+        <code>
+            button.addEventListener("click", (e)=>{
+                console.log("Click en un boton")
+            });
+            
+            contenedor.addEventListener("click", (e)=>{
+                console.log("Click en un contenedor azul");
+            },true);
+            
+            rojo.addEventListener("click", (e)=>{
+                console.log("Click en un contenedor rojo");
+            },true);
+        </code>
+    </pre>
+    <img src="img/image2.png" alt="">
+    <p>El flujo de eventos por defectp es "bubling" hace que primero se ejecute el mas especifico (hijo)</p>
+    <img src="img/image3.png" alt="">
+    <h3>Si le doy true al contenedor padre cambio el flujo a "capturing"</h3>
+    <p>cambiamos el flujo de eventos agregando el parametro true al contenedor que contiene a al otro, si hay varios niveles, debemos poner true en todos menos el mas especifico</p>
+    <h3>Detener propagación</h3>
+    <div class="green">
+        <div class="black">
+            <button class="button2">Click</button>
+        </div>
+    </div>
+    <pre>
+        <code>
+            button2.addEventListener("click", (e)=>{
+                console.log("Click en un boton");
+                e.stopPropagation();//detiene propagacion sobre el evento guardado en el parametro e
+            });
+            
+            green.addEventListener("click", (e)=>{
+                console.log("Click en un contenedor verde");
+            });
+            
+            black.addEventListener("click", (e)=>{
+                console.log("Click en un contenedor negro");
+            });
+        </code>
+      </pre>
+      
+    </main>
+    <script src="code.js"></script>
+</body>
+</html>

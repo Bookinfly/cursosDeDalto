@@ -17,12 +17,16 @@ function saludar(){//sin parametros
     alert("holis");
 }
 
-//////////_____MEJOR______///////////
-
+//////////_____MEJOR______//////////////////////////////////////////////////////////
+const saludoCorrecto = "Hola de forma correcta!";
 button3.addEventListener("click", ()=>{//correcto y con parametros
-    alert("Hola de forma correcta!");
+    alert(saludoCorrecto);
 });
 
+
+
+
+////////////////////////////////////////////////////////////////////////////////////
 button4.addEventListener("click",saludarUnaVez);
 
 function saludarUnaVez(){
