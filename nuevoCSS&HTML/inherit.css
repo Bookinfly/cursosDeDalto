@@ -1,0 +1,34 @@
+body {
+    color: blue;
+}
+
+div { 
+    font-family: sans-serif;
+    color: red;
+}
+
+h1 {
+    /*initial evita que herede la propiedad*/
+    color:initial;
+    /*retoma el valor inicial que tenía*/
+}
+
+h1 {
+    /*unset restablece al valor inicial*/
+    color:unset;
+    /*se comporta como inherit*/
+}
+
+h1 {
+    /*revert intenta buscar un valor que definiera el usuario previamente, de no hallartlo lo revierte a inherit*/
+    color:revert;
+}
+
+
+/* uso real de inherit */
+
+textarea {
+    /*textarea no hereda font family*/
+    font-family: inherit;
+    /*inherit le permite heredar, ahora va a buscar el valor de font-family en elementos superiores, permitiendo que el diseño se adapte cuando cambiemos las fuentes sin tener que ir al elemento en concreto*/
+}

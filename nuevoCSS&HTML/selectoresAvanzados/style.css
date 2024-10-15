@@ -1,0 +1,55 @@
+/* SELECTORES POR ATRIBUTO */
+
+img[src="dalto.png"]{
+    width: 10%;
+}
+
+/* SI EMPIEZA CON*/
+
+img[src$="png"]{
+    width: 10%;
+}
+
+
+
+/* SI TERMINA CON*/
+
+img[src^="dalto"]{
+    width: 100%;
+}
+
+
+/* SELECTOR DESCENDIENTE*/
+
+ul li {
+    background-color: red;
+}
+
+/* SELECTOR HIJO DIRECTO */
+
+li > em {
+    color:black;
+    background-color: aqua;
+}
+
+/* SELECTOR DE HERMANO ADYASENTE */
+/* un selector a la misma altura, el elemento debe seguir inmediatamente del otro marcado*/
+
+h1 + p {/*solo se aplica al p que esté despúes de un h1*/
+    color:blanchedalmond;
+}
+
+h1 + p + p{/*podemos agregar mas instrucciones para especificar uun elemento dentro de un anidamiento*/
+    color:blanchedalmond;
+}
+
+/*SELECTOR DE HERMANOS GENERALES*/
+/*es requisito que venga despúes del hermano mencionado primer, pero todos los hermanos que vengan despúes que coincidan son afectados*/
+h1 ~ p {
+    color:brown;
+}
+
+/* Añadir varios selectores para afectar a varios elementos */ 
+h1, p{
+    font-weight: 900;
+}
