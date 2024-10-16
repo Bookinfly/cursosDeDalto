@@ -35,6 +35,7 @@ li > em {
 /* SELECTOR DE HERMANO ADYASENTE */
 /* un selector a la misma altura, el elemento debe seguir inmediatamente del otro marcado*/
 
+/* SELECTOR DE HERMANO */
 h1 + p {/*solo se aplica al p que esté despúes de un h1*/
     color:blanchedalmond;
 }
