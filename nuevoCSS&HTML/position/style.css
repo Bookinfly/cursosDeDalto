@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    background-color: #eded;
+
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    color: #fff;
+    position: relative;
+}
+
+.box--blue{
+    background-color: blue;
+    top: -10px;
+    left: 60px;
+}
+
+/*Position viene por defecto en static, de modo que siue el orden natural del HTML, al cambiarlo a relative, ahora podemos añadirle propiedades con valores que lo muevan en relación a su posición inicial, SU ESPACIO ORIGINAL QUEDA RESERVADO*/
+
+/*Top y left siempre tienen prioridad sobre rigth y botom*/

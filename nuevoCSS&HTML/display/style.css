@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+}
+
+div {
+    padding: 20px;
+    background-color: #999;
+}
+
+a {
+    background-color: red;
+    color: #999;
+    display: block;
+    border: 1px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+
+/*Los elementos en linea no toman bién padding ni margin, de aceptarlo no reserva espacio real, y se superponen las cosas, para que ocupe más allá de su contenido cambiamos el display a block
+
+/*Los elementos en bloque ocupan toda la linea, incluso si sobraba espacio antes que ellos. Aceptan propiedades que modifican su tamaño.*/
+
+p {
+    background: black;
+    color: white;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+/*El padding en elementos en linea funciona bién en horizontal*/

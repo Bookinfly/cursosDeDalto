@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+}
+
+.nav {
+    background-color: #48e;
+}
+
+.nav__list {
+    margin: 0;
+}
+
+.nav__item {
+    display: inline-block;
+    padding: 10px;
+    background-color: #48e;
+    /* border: 1px #fff solid;
+    border-radius: 3px;
+    margin: 5px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px; */
+}
+
+.nav__item:hover {
+    background-color: #59e;
+}
+
+/*Inline-block funciona como un elemnto en bloque, pero que no ocupa todo el ancho necesariamente, y tampoco inicia una nueva linea*/
+
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+/*El valor display none no se muestra ni ocupa espacio*/

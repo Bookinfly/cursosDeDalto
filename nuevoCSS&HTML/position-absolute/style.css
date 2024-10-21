@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    background-color: #eded;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.contenedor{
+    border: 2px solid #000;
+    margin: 20px;
+    position: relative;
+}/*SI EL CONTENEDOR ES RELATIVE, ES PUNTO DE REFERECIA PARA PARA ELEMENTOS INTERNOS QUE DEFINAN SU POSITION*/
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: #db7;
+    color: #fff;
+}
+
+.box--blue{
+    background-color: #48e;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    /*PODEMOS CENTRAR LA CAJA DE ESTA FORMA*/
+}
+
+/**😄 POSITION ABSOLUTE SACA EL ELEMENTO DEL FLUJO NORMAL, YA NO RESERVA ESPACIO Y SUS POSICIONES SON ABSOLUTAS AL WINDOW, Y NO A SU POSICION INICIAL COMO CON RELATIVE*/
+
+.box--red{
+    background-color: #e54;
+}
+

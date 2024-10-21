@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    background-color: #eded;
+
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    color: #fff;
+    position: relative;
+}
+
+.box--blue{
+    background-color: blue;
+    top: 30px;
+    left: 20px;
+    z-index: 20;
+}
+
+/*El z index es la posicón en eje z de cada caja, que naturalmente cada elemento que este por debajo en el html, va a estar por encima en eje z del anterior, de modo que si lo movemos para arriba tapa al anterior y para abajo es tapado por el siguiente*/
+
+/*  UN METODO COMUN ES PONER EL Z-INDEX DE 10 EN 10 O 20 EN 20*/
+
+.box:first-child {
+    top: 150px;
+    left: 40px;
+    background-color: red;
+    z-index: 30;
+}
