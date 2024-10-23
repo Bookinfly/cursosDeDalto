@@ -1,4 +1,5 @@
 {
     "name" : "Logan",
-    "nick_name" : "Wolverine"
+    "nick_name" : "Wolverine",
+    "job" : "Xmen"
 }

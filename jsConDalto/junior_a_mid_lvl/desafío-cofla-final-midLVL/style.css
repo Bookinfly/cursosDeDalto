@@ -1,0 +1,14 @@
+body {
+    color: #000;
+}
+
+#getInfo {
+    font-size: 40px;
+    margin: 20px;
+}
+
+.info {
+    background-color: #969494;
+    padding: 20px;
+    font-size: 19px;
+}
