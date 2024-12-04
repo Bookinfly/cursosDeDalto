@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    position: relative;
+}
+
+.contenedor{
+    padding: 150px;
+    background-color: cornflowerblue;
+    position: relative;
+}
+
+.box{
+    height: 200px;
+    width: 300px;
+    position: fixed;
+    right: 0;
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-right: 0;
+    box-shadow: 0 0 40px #0009;
+    padding: 30px;
+    z-index: 30;
+}
+
+.box--fixed {
+    height: 60px;
+    width: 200px;
+    background-color: #f00;
+    position: sticky;
+    top: 20px;
+    z-index: 40;
+}
+
+.overlay {
+    background: linear-gradient( to top, #fff, transparent);
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    bottom: 0;
+    height: 100%;
+}
+
+.second{
+    top: 80px
+}
+
+.thrid{
+    top:180px;
+}

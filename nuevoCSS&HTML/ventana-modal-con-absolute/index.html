@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <dialog open>
+        <div class="modal__content">
+            <h2 class="modal__title">VENTANA MODAL</h2>
+            <p class="modal__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo modi nostrum aliquid, est ipsa tempora illo laborum ab asperiores corrupti saepe non, veritatis, excepturi id? Iste ullam voluptatem fugit dolor?
+            </p>
+            <form method="dialog">
+                <button class="modal__close-button">X</button>
+            </form>
+        </div><!--la forma actual de hacer modales es con etiqueta dialog y el atributo open, que se quita con un boton en method dialog-->
+    </dialog>
+    <!-- <div class="modal">
+        <div class="modal__content">
+            <h2 class="modal__title">VENTANA MODAL</h2>
+            <p class="modal__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo modi nostrum aliquid, est ipsa tempora illo laborum ab asperiores corrupti saepe non, veritatis, excepturi id? Iste ullam voluptatem fugit dolor?
+            </p>
+            <span class="modal__close-button">X</span>
+        </div>
+    </div> -->
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi eius, beatae voluptatum reprehenderit explicabo iste omnis nemo, ab tempore temporibus laborum saepe aut necessitatibus est quis sint quibusdam nesciunt!Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa illum, ad eligendi velit sapiente culpa debitis, earum beatae nostrum suscipit rerum quo odit sint! Quidem ex iure corporis id nam?</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi eius, beatae voluptatum reprehenderit explicabo iste omnis nemo, ab tempore temporibus laborum saepe aut necessitatibus est quis sint quibusdam nesciunt!Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa illum, ad eligendi velit sapiente culpa debitis, earum beatae nostrum suscipit rerum quo odit sint! Quidem ex iure corporis id nam?</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores excepturi eius, beatae voluptatum reprehenderit explicabo iste omnis nemo, ab tempore temporibus laborum saepe aut necessitatibus est quis sint quibusdam nesciunt!Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa illum, ad eligendi velit sapiente culpa debitis, earum beatae nostrum suscipit rerum quo odit sint! Quidem ex iure corporis id nam?</div>
+</body>
+<script>
+    document.querySelector(".modal__close-button").addEventListener("click", ()=>{
+        // document.querySelector(".modal").style.display = "none"
+    })
+</script>
+</html>
