@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mirar consola</h1>
+    <img src="image.png" alt="">
+    <ol>
+        <li><p>Prototipos en JavaScript: En JavaScript, casi todo es un objeto y todos los objetos descienden del prototipo Object. Esto significa que los objetos heredan propiedades y métodos de Object.prototype.</p></li>
+        <li>
+            <p>Creación de clases e instanciación de objetos: Cuando creas una clase y luego instancias un objeto de esa clase, estás creando un nuevo prototipo. Este nuevo prototipo tiene sus propias propiedades y métodos, además de heredar del prototipo Object. </p>
+            
+        </li>
+        <li>
+            <p>Herencia de prototipos: El nuevo prototipo creado al instanciar un objeto hereda las propiedades y métodos del prototipo Object, y puedes agregarle nuevas propiedades y métodos específicos.</p>
+        </li>
+        <h2>Prototipos en JavaScript</h2> <p>En JavaScript, casi todo es un objeto y todos los objetos descienden del prototipo <code>Object</code>. Esto significa que los objetos heredan propiedades y métodos de <code>Object.prototype</code>.</p> <h2>Creación de Clases e Instanciación de Objetos</h2> <p>Cuando defines una clase, no estás creando un prototipo directamente, sino una estructura que describe cómo deberían ser los objetos creados a partir de esa clase. Cuando instancias un objeto a partir de una clase, ese objeto tiene un prototipo que es la clase misma. Este prototipo contiene las propiedades y métodos definidos en la clase.</p> <h2>Objeto Instanciado y su Prototipo</h2> <p>El objeto instanciado no es un prototipo en sí mismo, pero tiene un prototipo que es la clase de la que fue creado. Este prototipo es compartido por todos los objetos instanciados de esa clase. El prototipo del objeto instanciado es accesible a través de <code>__proto__</code> o <code>Object.getPrototypeOf(objeto)</code>. Este prototipo contiene las propiedades y métodos definidos en la clase.</p> <h2>Herencia de Prototipos</h2> <p>Cuando creas un nuevo objeto a partir de una clase, este objeto hereda las propiedades y métodos del prototipo de la clase. Si defines una nueva clase que extiende otra clase, el prototipo de la nueva clase incluirá las propiedades y métodos de la clase base, además de las nuevas propiedades y métodos definidos en la nueva clase.</p>
+    </ol>
+    <script src="crearPrototipo.js"></script>
+</body>
+</html>

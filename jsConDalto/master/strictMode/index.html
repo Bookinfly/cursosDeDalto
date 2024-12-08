@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modo estricto</title>
+</head>
+<body>
+    <h1>Usando Modo Esdtricto en Js</h1>
+    <img src="image.png" alt="">
+    <p>Desde Ecma Script 6 se introdujo la opción de strict mode, la cual nos permite que el interprete agregue limitaciones a la sintaxis, obligandonos a usar mejores prácticas y evitando los errores propios del lenguaje.</p><br>
+    <span>Para usarlo de forma global lo ponemos encima del código</span>
+    <code>"use strict";</code><br>
+    <h2>Convertimos errores dificiles de detectar en excepciones que finalizan la ejecución y dejan un mensaje de error</h2>
+
+    <h3>Las variables deben estar declaradas</h3>
+    <pre>    <code>"use strict";
+
+        let name1 = "Nahuel"
+        
+        console.log(name1)
+        
+        nombre = "Nahuel"//error
+        
+        console.log(nombre)
+        </code></pre>
+        <p>Sin el modo estricto al olvidarse de declarar una variable se declara automatica como var y ya no se usa var por problemas de especificidad</p>
+
+        <img src="image2.png" alt="">
+        <br>
+
+        <h3>No deja intentar sobrescribir sin exito y evita errores</h3>
+        <p>Si intentamos sobrescribir una propiedad (writeable: false), normalmente no funciona, pero no recibimos aviso del intento fallido. Modo estricto captura el error y nos lo avisa.</p>
+        <br>
+        <pre>
+            <code>
+                "use strict";
+
+
+                const obj = {}
+
+                //forma alternativa de definir propiedades
+                Object.defineProperty(obj, 'nombre', {value: 'pedro', writable : false})// writable : false no deja sobrescribir
+
+                console.log(obj.nombre)
+
+                obj.nombre = "Pepe"
+
+                console.log(obj.nombre)
+            </code>
+            <img src="image1.png" alt="">
+        </pre>
+
+        <h3>Evita errores no visibles al intentar de forma fallida hacer cambios no permitidos en objetos</h3>
+        <pre>
+            <code>
+                "use strict";
+
+                const obj = {nombre : "lucas"};
+
+                Object.preventExtensions(obj);//prohibimos definir nuevas propiedades
+
+                console.log(obj.nombre);
+
+                obj.apellido = "Dalto";//error pero sin modo estricto no avisa
+            </code>
+            <img src="image3.png" alt="">
+        </pre><br>
+
+        <h3>No deja intentar agregar una propiedad a un string</h3>
+        <pre>
+            <code>
+                "use strict";
+
+                const str = "ABC";
+
+                str.minus = "abc";
+
+                console.log(str.minus)
+
+            </code>
+            <img src="image4.png" alt="">
+        </pre>
+        <br>
+        <h3>No deja que uses multiples variables en una función</h3>
+        <pre>
+            <code>
+                "use strict";
+
+                function hablar (texto, texto){
+                    console.log(texto)//si hay 2 parámetros iguales la función toma la última
+                }
+
+                hablar("pepo","pipo")
+            </code>
+            <img src="image5.png" alt="">
+        </pre>
+        <br>
+        <h3>Uso indebido de delete</h3>
+        <p>Ante estos casos en lugar de ignorarlo captura el error</p>
+        <span>
+            <mark>podes eliminar propiedades de objetos</mark></span>
+        <pre>
+            <code>
+                "use strict";
+                const obj1 = {
+                nombre: "Nano"
+                }
+
+                delete obj1;
+
+                console.log(obj1.nombre)
+            </code>
+        </pre>
+        <img src="image6.png" alt="">
+        <br>
+        <h3>Cambia el This</h3>
+        <p>Las funciones constructoras pasan a ser mas complejas y dejan de funcionar normalmente, es recomendable usar la sugar sintax de class introducida en ES6</p>
+        <pre>
+            <!-- encontre error que quita relevancia a esto -->
+            <code>
+                "use strict";
+
+                function Persona(nombre) {
+                    this.nombre = nombre; // Error: Cannot set property 'nombre' of undefined
+                }
+
+                const obj = Persona("Pocho"); // Falta 'new'
+
+            </code>
+        </pre>
+        <img src="image7.png" alt="">
+        <h4>Convenciones de Nomenclatura</h4>
+        <p>
+            Funciones Constructoras: Por convención, las funciones constructoras en JavaScript se nombran con una letra inicial mayúscula. Esto ayuda a distinguirlas de las funciones normales y señala que deben ser usadas con la palabra clave new.</p>
+            <h4>Modo Estricto y new</h4>
+            <p>
+                Uso de new: En modo estricto, es importante usar new al llamar a una función constructora. Si no se usa new, this no se referirá al nuevo objeto creado, sino que será undefined, lo que causará un error.</p>
+        <pre>
+            <code>
+                "use strict";
+
+                function Persona(nombre) {
+                    this.nombre = nombre;
+                    this.saludar = function() {
+                        console.log(`Hola ${this.nombre}`);
+                    };
+                }
+
+                const obj = new Persona("Pocho");
+                obj.saludar(); // Salida: Hola Pocho
+
+            </code>
+        </pre>
+        <p>Funciones Constructoras: Cuando usas una función constructora con new, this se refiere al nuevo objeto creado. Sin new, this será undefined en modo estricto, lo que causará un error.</p>
+        <p>Funciones Normales: En funciones normales, this será undefined en modo estricto si no se establece explícitamente. En modo no estricto, this se refiere al objeto global (window en navegadores).</p>
+        <img src="image8.png" alt="">
+        <p>En modo estricto, this se comporta de manera más predecible y segura, ayudando a evitar errores comunes. Asegúrate de usar new al llamar a funciones constructoras y declarar todas las variables explícitamente para evitar problemas.</p>
+        <h3>Números Octales requieren de una letra "o" adelante</h3>
+        <p>Los números octales pueden producir errores sin modo estricto</p>
+        <img src="image9.png" alt="">
+        <pre>
+            <code>
+                console.log(0o25)//muestra 21 en modo estricto
+                console.log(025)//da un error en modo estricto
+                console.log(025)//muestra 21 en modo normal
+
+            </code>
+
+        </pre>
+        <h3>arguments y eval no pueden ser nombres validos</h3>
+        <img src="imagef.png" alt="">
+        <h3>Puedes usar use strict dentro de una funcion y no necesariamente en todo el código</h3>
+        <img src="imagef2.png" alt="">
+        <h2>"use strict" Solo funciona al principio de una función o del documento</h2>
+
+    <script src="code3.js"></script>
+</body>
+</html>
