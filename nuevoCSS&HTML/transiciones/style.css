@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #f00;
+    margin: auto;
+    margin-top: 50px;
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
+    /* el transition tiene que estar en el bloque original */
+    transition-property: background-color, color, font-size, margin;
+    transition-duration: 1s;
+    transition-delay: 3s;
+    color: #f00;
+    /* Es mala practica usar transition all ya que genera mucha sobrecarga innecesaria */
+    /* cuidado con las transiciones en los margin
+    y sobre todo con el tamaño auto */
+}
+
+.box:hover {
+    background-color: "a22";
+    color: #fff;
+    background-color: blue;
+    font-size: 80px;
+    margin-top: 10px;
+}

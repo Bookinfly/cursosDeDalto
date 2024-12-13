@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+img {
+    width: 400px;
+    height: 200px;
+    /* object-fit: contain; PROVOCA QUE ENTRE ENTERO, OCUPANDO EL ALTO O ANCHO, PERO DEJANDO ESPACIO VACIO DONDE SOBRE*/
+    /* object-fit: fill; COMPORTAMIENTO POR DEFECTO, SE ESTIRA EL CONTENIDO PARA LLENAR EL CONTENEDOR*/
+    /* object-fit: cover; INTENTA ADAPTARSE PARA MOSTRAR LO MAS QUE PUEDA OCULTANDO LO DEMÁS PARA EVITAR DESBORDAMIENTO */
+    /*    object-position: top; sirve con vover para señalar que parte mostrar o para monerle medidad desde donde mostrar*/
+    /* object-fit: none; EVITA QUE EL CONTENIDO SE ADAPTE */
+    object-fit:scale-down; /*SE AJUSTA AL VALOR MAS CHICO DE ANCHO O ALTO (contain o none)*/
+    border: 2px solid #000;
+    margin-top: 50px;
+    margin-left: 50px;
+}

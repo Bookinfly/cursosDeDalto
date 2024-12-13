@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.flexbox{
+    display: flex;
+    /* flex-direction: row; POR DEFECTO en fila */
+    flex-direction: column;
+    /* flex-direction: column-reverse; */
+    /* flex-direction: row-reverse;cambia la dirección a la contratia a la que esté configurada la del texto*/
+    
+}
+
+.flex-item {
+    width: 400px;
+    background-color: red;
+    margin: 10px;
+    color: aliceblue;
+    font-size: 40px;
+    text-align: center;
+}
+
+.flex-item:first-child {
+    background-color: green;
+}
+
+.flex-item:last-child {
+    background-color: blue;
+}

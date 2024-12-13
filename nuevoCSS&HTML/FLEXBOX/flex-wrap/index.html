@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Flex-wrap permite que los items que no entran bajen a otras filas/columnas</h1>
+    <div class="flexbox">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+        <div class="flex-item">7</div>
+    </div>
+    <h3>Cuando dejan de entrar, crea una nueva columna/fila</h3>
+    <pre>
+        <code>
+            body { 
+                margin: 0;
+                font-family: sans-serif;
+            }
+            
+            .flexbox {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                /*con wrap al no entrar pueden ir descendiendo en otra fila*/
+                height: 100vh;
+            }
+            
+            .flex-item {
+                background-color: #800;
+                margin: 10px;
+                color: #fff;
+                font-size: 40px;
+                text-align: center;
+                width: 200px;
+                direction: rtl;/*derecha a izquierda*/
+            }
+            
+            .flex-item:first-child {
+                background-color: black;
+            }
+            
+            .flex-item:last-child {
+                background-color: #f88;
+            }
+        </code>
+    </pre>
+    <img src="image.png" alt="">
+
+    <h2>Flex y Flex-flow</h2>
+    <div class="flexbox2">
+        <div class="flex-item2">1</div>
+        <div class="flex-item2">2</div>
+        <div class="flex-item2">3</div>
+        <div class="flex-item2">4</div>
+        <div class="flex-item2">5</div>
+        <div class="flex-item2">6</div>
+        <div class="flex-item2">7</div>
+    </div>
+</body>
+</html>

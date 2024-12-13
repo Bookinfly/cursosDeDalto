@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #ccc;
+}
+
+.box {
+    width: 220px;
+    height: 220px;
+    background-color: #fff;
+    margin-top: 50px;
+    color: #f00;
+    position: relative;
+    left: 0;
+    border: 2px solid #0009;
+    margin: auto;
+    margin-top: 50px;
+    /* overflow: visible; por defecto */
+    /* overflow: hidden; oculta el ecxedente */
+    /* overflow: scroll; agrega 2 scrol 1 arriba y uno abajo */
+    /* overflow-y: scroll; agrega scrol en eje y
+    overflow-y: scroll;  agrega scrol en eje x
+    EL PROBLEMA ES QUE SI EL CONTENIDO NO DESBORDA EL SCROLL SE QUEDA*/
+    overflow: auto; /* crea solo el scrol si lo necesita y donde lo requiera; */
+    /* overflow: clip; es como hidden pero no deja espacio para barras */
+
+}
+/* si no le defino el alto a la caja, esta se va a ajustar segun su contenido, pero al tener su alto y ancho fijos  puedo tener desvordamiento */

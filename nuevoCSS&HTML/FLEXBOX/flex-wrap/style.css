@@ -1,0 +1,54 @@
+body { 
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /*con wrap al no entrar pueden ir descendiendo en otra fila*/
+    height: 100vh;
+}
+
+.flex-item {
+    background-color: #800;
+    margin: 10px;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    width: 200px;
+    direction: rtl;/*derecha a izquierda*/
+}
+
+.flex-item:first-child {
+    background-color: black;
+}
+
+.flex-item:last-child {
+    background-color: #f88;
+}
+
+.flexbox2 {
+    display: flex;
+    flex-flow: row wrap;
+    height: 90vh;
+}
+
+.flex-item2 {
+    background-color: #800;
+    margin: 10px;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    width: 100px;
+    direction: rtl;
+}
+
+.flex-item2:first-child {
+    background-color: black;
+}
+
+.flex-item2:last-child {
+    background-color: #f88;
+}

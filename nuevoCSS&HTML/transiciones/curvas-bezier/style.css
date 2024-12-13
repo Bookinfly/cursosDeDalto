@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+.box {
+    width: 120px;
+    height: 120px;
+    background-color: #f00;
+    margin-top: 50px;
+    font-size: 60px;
+    transition-property: left;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0, 0.65, 1, 0.77);
+    color: #f00;
+    position: relative;
+    left: 0;
+}
+
+.box2 {
+    width: 120px;
+    height: 120px;
+    background-color: #f00;
+    margin-top: 50px;
+    font-size: 60px;
+    left: 0;
+    transition: left 1s cubic-bezier(.2,.81,.98,.91) 0.5s;
+    /* primero duración, segundo propiedad, tercero curva, cuarto delay */
+    color: #f00;
+    position: relative;
+    -webkit-transition: left 1s cubic-bezier(.2,.81,.98,.91) 0.5s;
+    -moz-transition: left 1s cubic-bezier(.2,.81,.98,.91) 0.5s;
+    -ms-transition: left 1s cubic-bezier(.2,.81,.98,.91) 0.5s;
+    -o-transition: left 1s cubic-bezier(.2,.81,.98,.91) 0.5s;
+}
+
+/* vamos a hacer que cuando actuemos sobre un elemento sea una caja la afectada */
+body:hover .box, body:hover .box2{
+    left: 600px;
+}

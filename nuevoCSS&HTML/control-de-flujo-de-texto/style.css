@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #ccc;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: #fff;
+    border: 1px solid #0006;
+    white-space: nowrap;/*  SIN SALTOS DE LINEA */
+    /* white-space: pre; PRE-FORMETEADO RESPETA UNICAMENTE LOS SALTOS INCLUIDOS EN EL TEXTO */
+    /* white-space: normal; SE JUSTA SOLO, VIENE POR DEFECTO */
+    /* white-space: pre-wrap; RESPETA LOS SALTOS PRE FORMATEADOS, PERO INCLUYE LOS NECESARIOS PARA EVITAR DESBORDAMIENTO DE FORMA AUTOMATICA */
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /* COMBINACION QUE CON NOWRAP PONE "..." PARA AVISAR QUE CONTINUA
+    TAMBIEN FUNCIONA CON pre */
+
+    /* text-overflow: clip; No añade ningún indicador visual de que el contenido ha sido cortado */
+    word-break: break-all; /* recorta las palabras para lograr que ocupen el ancho disponible */
+    overflow-wrap: break-word;/* rompe las palabras por silabas para saltar de linea*/
+    /* overflow-wrap: anywhere; las palabras largas que no entran en una linea se cortan */
+
+    text-wrap: pretty;/*evita que palabras queden viudas o huerfanas ""solas"*/
+}
+
+h1{
+    text-wrap: balance;/* al desbordarse intenta que los saltos de lineas dejen unos bloques mas estéticos*/
+}
