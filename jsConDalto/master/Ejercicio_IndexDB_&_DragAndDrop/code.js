@@ -1,10 +1,6 @@
 "use strict"
 
-var IDBRequestF = indexedDB;
-
-console.log(IDBRequestF);
-
-IDBRequestF = indexedDB.open("NanoBase", 1);
+const IDBRequestF = indexedDB.open("nanobase", 1);
 
 IDBRequestF.addEventListener("upgradeneeded", ()=>{//creando almacen de objetos
     const db = IDBRequestF.result;
@@ -25,25 +21,20 @@ IDBRequestF.addEventListener("error", ()=>{
 })
 
 const addObjeto = objeto => {
-    const db = IDBRequestF.result;
-    const IDBtransaction = db.transaction("nombres", "readwrite");
-    const objectStore = IDBtransaction.objectStore("nombres");
-    objectStore.add(objeto);
-    IDBtransaction.addEventListener("complete", ()=>{
-        console.log("objeto agregado correctamente")
-    })
+    const IDBData = getIDBData("readwrite", "objeto agregado correctamente");
+    IDBData[0].add(objeto);
 }
 
 const leerObjetos = ()=>{
-    const db = IDBRequestF.result;
-    const IDBtransaction = db.transaction("nombres", "readonly");
-    const objectStore = IDBtransaction.objectStore("nombres");
-    const cursor = objectStore.openCursor();
+    const IDBData = getIDBData("readonly");
+    const cursor = IDBData[0].openCursor();
+    const fragment = document.createDocumentFragment();
     cursor.addEventListener("success", ()=>{
         if (cursor.result){
-            console.log(cursor.result.value);
+            let elemento = nombresHTML(cursor.result.key, cursor.result.value);
+            fragment.appendChild(elemento);
             cursor.result.continue();
-        } else console.log("todos los datos fueron leidos");//siempre se ejecuta la ultima vez en null
+        } else document.querySelector(".nombres").appendChild(fragment);
     })
 }
 
@@ -61,7 +52,7 @@ const borrarObjeto = (key) => {
     IDBData.delete(key, "objeto eliminado correctamente");
 }
 
-const getIDBData = (mode, msg) => {
+const getIDBData = (mode, msj) => {
     const db = IDBRequestF.result;
     const IDBtransaction = db.transaction("nombres", mode);
     const objectStore = IDBtransaction.objectStore("nombres");
@@ -71,4 +62,28 @@ const getIDBData = (mode, msg) => {
     return [objectStore, IDBtransaction];
 }
 
-// En resumen, el cursor se utiliza para iterar sobre todos los objetos en el almacén de objetos "nombres" y realizar alguna acción con cada uno de ellos (en este caso, imprimirlos en la consola).
+const nombresHTML = (id, name) => {
+    const container = document.createElement("div");
+    const h2 = document.createElement("h2");
+    const options = document.createElement("div");
+    const saveButton = document.createElement("button");
+    const deleteButton = document.createElement("button");
+
+    container.classList.add("nombre");
+    options.classList.add("options");
+    saveButton.classList.add("imposible");
+    deleteButton.classList.add("delete");
+
+    saveButton.textContent = "Guardar";
+    deleteButton.textContent = "Eliminar";
+    h2.textContent = name.nombre;
+
+    options.appendChild(saveButton);
+    options.appendChild(deleteButton);
+
+    container.appendChild(h2);
+    container.appendChild(options);
+
+    return container;
+
+}
