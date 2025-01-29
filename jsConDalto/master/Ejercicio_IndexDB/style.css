@@ -10,7 +10,10 @@ body, h2, div, input, button {
 }
 
 .nombres {
-    margin: 40px;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 40px;
+
 }
 
 .nombre {
@@ -62,4 +65,5 @@ body, h2, div, input, button {
 .nombre h2 {
     padding: 6px;
     color: #48e;
+    outline-color: #37d;
 }

@@ -1,23 +1,36 @@
 "use strict"
 
-const IDBRequestF = indexedDB.open("nanobase", 1);
+const IDBRequestF = indexedDB.open("NanoBase", 1);
 
-IDBRequestF.addEventListener("upgradeneeded", ()=>{//creando almacen de objetos
+IDBRequestF.addEventListener("upgradeneeded", ()=>{
     const db = IDBRequestF.result;
     db.createObjectStore("nombres", {
-        autoIncrement: true,//(en lugar de autoincrement se puede usar keypath)
+        autoIncrement: true,
     }
     )
 })
 
-// console.log(IDBRequestF);
-
 IDBRequestF.addEventListener("success", ()=>{
-    console.log("Todo salió correctamente");
+    leerObjetos();
 })
 
 IDBRequestF.addEventListener("error", ()=>{
     console.log("Error al abrir la base de datos")
+})
+
+document.getElementById("add").addEventListener("click", ()=>{
+    let nombre = document.getElementById("nombre").value;
+    if (nombre.length > 0) {
+        if (document.querySelector(".posible") != undefined){
+            if (confirm("Hay elementos sin guardar: ¿Deseas continuar?")){
+                addObjeto({nombre});
+                leerObjetos();
+            }
+        } else {
+            addObjeto({nombre});
+            leerObjetos();
+        }
+    }
 })
 
 const addObjeto = objeto => {
@@ -29,6 +42,7 @@ const leerObjetos = ()=>{
     const IDBData = getIDBData("readonly");
     const cursor = IDBData[0].openCursor();
     const fragment = document.createDocumentFragment();
+    document.querySelector(".nombres").innerHTML = "";
     cursor.addEventListener("success", ()=>{
         if (cursor.result){
             let elemento = nombresHTML(cursor.result.key, cursor.result.value);
@@ -76,13 +90,32 @@ const nombresHTML = (id, name) => {
 
     saveButton.textContent = "Guardar";
     deleteButton.textContent = "Eliminar";
+
     h2.textContent = name.nombre;
+    h2.setAttribute("contenteditable", "true")
+    h2.setAttribute("spellcheck", "false")
 
     options.appendChild(saveButton);
     options.appendChild(deleteButton);
 
     container.appendChild(h2);
     container.appendChild(options);
+
+    h2.addEventListener("keyup", ()=>{
+        saveButton.classList.replace("imposible", "posible")
+    });
+
+    saveButton.addEventListener("click", ()=>{
+        if (saveButton.className == "posible") {
+            modificarObjeto(id, {nombre: h2.textContent});
+            saveButton.classList.replace("posible", "imposible");
+        }
+    });
+
+    deleteButton.addEventListener("click", ()=>{
+        borrarObjetoar(id);
+        document.querySelector(".nombres").removeChild(container);
+    })
 
     return container;
 
